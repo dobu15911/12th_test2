@@ -1,0 +1,131 @@
+/* style.css */
+
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+a {text-decoration: none;}
+ul{list-style-type: none;}
+@font-face{
+    font-family: 'csnpwdt\ NFI';
+    src: url('../font/csnpwdt\ NFI.ttf');
+    }
+    #bg > #text{
+        font-family: 'csnpwdt\ NFI';
+        font-weight: normal;
+    }
+#bg{
+    position: relative;
+    width: 751px;
+    height: 500px;
+    /* outline: 2px solid red; */
+    background: #0f2439;
+    margin: 0 auto;
+    overflow: hidden;
+}
+#bg > #text {
+    width: 400px;
+    /* outline: 2px solid red; */
+    position: absolute;
+    color: #f7b822;
+    font-size: 70px;
+    text-align: center;
+    z-index: 1;
+    bottom: 30px;
+    left: 180px;
+}
+#bg > #img > #moon {
+    /* outline: 1px solid red; */
+    position: absolute;
+    left: 180px;
+    top: -50px;
+}
+#bg > #img > #cl_1 {
+    /* outline: 2px solid orange; */
+    position: absolute;
+    left: 100px;
+    top: 160px;
+}
+#bg > #img > #cl_2 {
+    /* outline: 2px solid orange; */
+    position: absolute;
+    left: 10px;
+    top: 30px;
+}
+#bg > #img > #cr_1 {
+        /* outline: 2px solid orange; */
+        position: absolute;
+        right: 30px;
+        top: 175px;
+}
+#bg > #img > #cr_2 {
+    /* outline: 2px solid orange; */
+    position: absolute;
+    right: -100px;
+    top: 80px;
+    overflow: hidden;
+}
+#bg > #img > #cr_3 {
+    /* outline: 2px solid orange; */
+    position: absolute;
+    right: 100px;
+    top: 40px;
+    /* overflow: hidden; */
+}
+#bg > #img > #gr {
+    /* outline: 2px solid orange; */
+    position: absolute;
+    top: 280px;
+    width: 751px;
+    /* box-shadow: 0px 0px 20px 20px orange; */
+    /* border-radius: 600px 600px; */
+        filter: drop-shadow(5px 5px 8px rgba(255, 255, 0, 0.548));
+}
+#bg > #img > #asset {
+    position: absolute;
+    z-index: 99;
+    /* outline: 2px solid red; */
+
+    animation-name: asset; /*애니메이션 이름*/
+    animation-duration: 8s; /*재생시간*/
+    animation-timing-function: ease-in; /*이동속도 설정*/
+
+    /* 값 : 숫자 | 무한반복(infinite) | */
+    animation-iteration-count: infinite;
+}
+@keyframes asset{
+    /* 시작 */
+    0% {
+        left: 0; bottom: 0;
+    }
+    25% {
+        left: 900px; bottom: 600px;
+    }
+    50% {
+       
+        bottom: -300px; right:-500px;
+    }
+    100% {
+        transform: rotate(30deg) scaleX(-2);
+        
+        right : 900px; bottom: 600px;
+    }
+}
+
+
+
+
+/* 애니메이션 */
+#text{
+    animation-name: text;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes text{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
